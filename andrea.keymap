@@ -54,17 +54,17 @@
 		raise_layer {
 // -----------------------------------------------------------------------------------------
 //   | GRAVE | F1     | F2       | F3     | F4     | F5       | F6    | F7    | F8    | F9    | F10   | F11   | F12   | DEL         | DEL | MUTE  |
-//   | BT_CLR| 7      | 8        | 9      | -      | *        | (     | )     | UP    | TRANS | PRSC | TRANS | TRANS | RESET       |         NEXT T|
+//   | BT_CLR| 7      | 8        | 9      | -      | *        | (     | )     | UP    | TRANS | PSCRN | TRANS | TRANS | RESET       |         NEXT T|
 //   | TRANS | 4      | 5        | 6      | +      | @        | !     | LEFT  | DOWN  | RIGHT | TRANS | TRANS |         TRANS       |         PREV T|
 //   | SHIFT | 1      | 2        | 3      | 0      | TRANS    | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |               PG_UP |
 //   | LWIN  |         LCTRL     | TRANS       | LALT    |         SPACE | FN  |                                            HOME   | PG_DN | END   |
 
 			bindings = <
     &kp GRAVE        &kp F1           &kp F2           &kp F3          &kp F4          &kp F5            &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &kp DEL      &kp DEL            &kp C_MUTE
-    &bt BT_CLR       &kp KP_N7        &kp KP_N8        &kp KP_N9       &kp KP_MINUS    &kp KP_MULTIPLY   &kp PSCRN        &kp SLCK         &kp PAUSE_BREAK  &trans           &trans           &trans           &trans           &reset                          &kp C_NEXT
-    &trans           &kp KP_N4        &kp KP_N5        &kp KP_N6       &kp KP_PLUS     &rgb_ug RGB_HUI   &kp INS          &kp HOME         &kp PG_UP        &trans           &trans           &trans                            &trans                          &kp C_PREV
-    &kp LSHFT        &kp KP_N1        &kp KP_N2        &kp KP_N3       &kp KP_N0       &rgb_ug RGB_HUD   &trans           &kp DEL          &kp END          &kp PG_DN        &trans           &trans           &trans                            &kp PG_UP
-    &trans                            &kp LGUI                         &trans          &trans        &trans           &kp C_MENU                                                                                            &kp HOME         &kp PG_DN      &kp END        
+    &bt BT_CLR       &kp KP_N7        &kp KP_N8        &kp KP_N9       &kp KP_MINUS    &kp KP_MULTIPLY   &kp LPAR         &kp RPAR         &kp UP           &trans           &kp PSCRN        &trans           &trans           &reset                          &kp C_NEXT
+    &trans           &kp KP_N4        &kp KP_N5        &kp KP_N6       &kp KP_PLUS     &kp AT            &kp EXCL         &kp LEFT         &kp DOWN         &kp RIGHT        &trans           &trans                            &trans                          &kp C_PREV
+    &kp LSHFT        &kp KP_N1        &kp KP_N2        &kp KP_N3       &kp KP_N0       &trans            &trans           &trans           &trans           &trans           &trans           &trans           &trans                            &kp PG_UP
+    &kp LWIN                          &kp LCTRL                        &trans          &kp LALT          &kp SPACE        &kp FN                                                                                            &kp HOME         &kp PG_DN      &kp END        
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
